@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Arvo", serif ;
+}
+
+hr
+{
+  height: 2px;
+  margin-bottom: 5px ;
+  background-image: url('body_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* CSS FOR NAVBAR */
+
+body
+{
+  background-image: url('body_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20%;
+    background: transparent;
+    width: 100%;
+}
+
+ 
+.navbar ul
+  {
+   
+    position: relative;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+       
+    
+   
+    
+  }
+
+ul li
+  {
+      list-style: none;
+  }
+
+ul li a
+  {
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 100px;
+    z-index: 10;
+    color: #0ef;
+  }
+
+ul li a i
+  {
+    font-size: 2em;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+ul li:hover a i
+  {
+    color:#c7f80d;
+    filter: drop-shadow(0 0 15px #c7f80d);
+  }
+
+
+ 
+
+ul li.active a i
+  {
+    color: #d0ff00;
+    filter: drop-shadow(0 0 15px #c7f80d);
+    transform: translateY(-20px);
+  }
+
+.indicator
+  {
+      position: absolute;
+      top: -5px;
+      transition: .5s;
+      width: 10px;
+      height: 60px;
+      background:transparent;
+      border-radius: 15px;
+      transition: .5s;
+      box-shadow: 0px 0px  10px 1px black, 0  0 10px 3px #c7f80d;
+  }
+
+  
+
+ul li text
+  {
+       position: absolute;
+       pointer-events: none;
+       transform: translateY(37px);
+       opacity: 0;
+       font-size: 0.8em;
+       letter-spacing: 0.05em;
+       transition: .5s;
+       text-transform: uppercase;
+       font-family:"Arvo", serif ;
+
+ }
+
+ul li.active text
+  {
+    opacity: 1;
+    color: #c7f80d;
+    letter-spacing: .15em;
+    transition: .5s;
+    filter: drop-shadow(0 0 10px #c7f80d);
+  }
+
+  .indicator span
+{
+    position: absolute;
+    width: 80px;
+    bottom: -40px;
+    height: 20px;
+    background: transparent;
+    box-shadow: 0px 0px  5px 1px black, 0  0 8px 2px #c7f80d;
+    border-radius: 15px;
+    
+
+}
+
+
+/* CSS FOR SUBJECT LIST */
+
+
+
+.subjects
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 75%;
+  padding: 5px 0px ; 
+  gap: 20px;
+  background: transparent;
+  opacity: 0;
+ 
+}
+
+.subjects a
+{
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 6px 30px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: .5s;
+  width: 330px;
+ 
+}
+
+.subjects a:hover
+{
+  color: var(--clr);
+  letter-spacing: 0.1em;
+  width: 350px;
+  transition: .5s;
+  border: 2px solid var(--clr);
+  box-shadow: 0 0 10px 5px var(--clr);
+}
+
+
+.subjects a span
+{
+  position: relative;
+  z-index: 1;
+}
+
+.subjects a i
+{
+  position: absolute;
+  inset: 0;
+  display: block;
+
+}
+
+.subjects a  i::before
+{
+ content: '';
+ position: absolute;
+ top: -40%;
+ left: 90%;
+ height: 4px;
+ width: 10px;
+ background: black;
+ transform:  skewX(325deg);
+transition: .5s;
+}
+
+.subjects a:hover  i::before
+{
+  left: 0%;
+  width: 20px;
+  transition: .6s;
+}
+
+.subjects a  i::after
+{
+ content: '';
+ position: absolute;
+ bottom: -40%;
+ left: 10%;
+ height: 4px;
+ width: 10px;
+ background: black;
+ transform: skewX(325deg);
+transition: .5s;
+}
+
+.subjects a:hover  i::after
+{
+  left: 90%;
+  width: 20px;
+  transition: .6s;
+}
